@@ -8,5 +8,7 @@ git config --global credential.helper store
 
 git add .
 
+git commit 
+
 git push
 
