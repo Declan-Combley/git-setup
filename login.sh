@@ -8,7 +8,6 @@ git config --global credential.helper store
 
 git add .
 
-git commit 
+git commit -m "Logging In"
 
 git push
-
