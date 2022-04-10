@@ -3,7 +3,7 @@ This script makes setting up git using ssh keys a bit more painless.
 
 
 # Prerequisites
-You must have git and root privileges.
+You must have xclip installed aswell as git and root privileges.
 
 
 # How does it work?
