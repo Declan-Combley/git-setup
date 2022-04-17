@@ -12,11 +12,11 @@ if [ $key == "<your-ssh-key>" ];then
 fi
 
 if [ $email == "" ] || [ $name == "" ];then
-	echo "Your github email: "; read email
-	echo "Your username: "; read username
+	read -p "Your github email: " email
+	read -p "Your username: " name
 
 	git config --global user.email "$email"
-	git config --global user.name "$username"
+	git config --global user.name "$name"
 fi
 
 echo $KEY | xclip -selection c; echo "Your can now past your ssh key using Ctrl-V"
