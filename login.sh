@@ -4,16 +4,15 @@ clear
 
 key=your-ssh-key
 
-run=$(cat has-run.txt)
+email=$(git config --get user.email)
+name=$(git config --get user.name)
 
-if [ $run -ne "1" ];then
+if [ $email == "" ] || [ $name == "" ];then
 	echo "Your github email: "; read email
 	echo "Your username: "; read username
 
 	git config --global user.email "$email"
 	git config --global user.name "$username"
-
-	> has-run.txt; echo 1 > has-run.txt
 fi
 
 echo $KEY | xclip -selection c; echo "Your can now past your ssh key using Ctrl-V"
