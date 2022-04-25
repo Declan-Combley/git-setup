@@ -1,8 +1,7 @@
 # What is this script
-This script makes setting up git using ssh keys a bit less painful by storing your git info and copying your ssh key just before logging in.
+This script makes setting up git using ssh keys a bit less painful by storing your git.   
 
 # Prerequisites
-- xclip
 - internet 
 - linux or a bash based terminal
 
@@ -18,7 +17,7 @@ git config --globas user.email "your-email"
 
 <br>
 
-If not, these steps still apply. It will then ask you to enter your username and password, just remember that your password will be the key that you copied, so just hit Control+Shift+V or Cmd+Shift+V if you're using mac. Now `cd` into your repository and `ls`, there will be two files, readme.md and login.sh. Before running the script you must replace the `key=<you're-ssh-key>` in line 5 of login.sh with your actual key which should still be copied. Now all thats left is to run the script (remember to save). To run it use these two commands -
+If not, these steps still apply. It will then ask you to enter your username and password, just remember that your password will be the key that you copied, so just hit Control+Shift+V or Cmd+Shift+V if you're using mac. Now `cd` into your repository and `ls`, there will be two files, readme.md and login.sh. Now all thats left is to run the script (remember to save). To run it use these two commands -
 
 ```bash 
 chmod +x login.sh    
