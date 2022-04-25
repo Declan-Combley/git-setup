@@ -19,7 +19,7 @@ if [ $email == "" ] || [ $name == "" ]; then
 	git config --global user.name "$name"
 fi
 
-echo $KEY | xclip -selection c; echo "Your can now past your ssh key using Ctrl-V"
+echo $key | xclip -selection c; echo "Your can now past your ssh key using Ctrl-V"
 
 git config --global credential.helper store 
 
