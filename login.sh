@@ -1,20 +1,20 @@
 #!/bin/bash
 
-echo -n "Have you set your git username and email? "
+name=$(git config --global user.name)
+email=$(git config --global user.email)
 
-read answer
+if [[ $name == "" ]] || [[ $email == "" ]]; then
+  echo -n "git username: "
+  read config_name
 
-if [ $answer == "no" ] || [ $answer == "No" ]; then
-  echo "use these commands"; echo ""; sleep .5
+  echo -n "git email: "
+  read config_email
 
-  echo 'git config --global user.email "your-email"'
-  echo 'git config --global user.name "your-username"'
-  
-  echo ""; echo "do that and then run this script again"; sleep .5
-  exit
+  git config --global user.name $config_name
+  git config --global user.email $config_email
 fi
 
-git config --global credential.helper store 
+git config --global credential.helper store
 
 git add .
 
